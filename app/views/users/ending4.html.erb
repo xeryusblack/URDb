@@ -1,0 +1,27 @@
+<div class="container">
+	<div class="row">
+		<div class="col-lg-12 text-center">
+			<h2>Here is a movie just for you!</h2>
+		</div>
+		<div class="col-lg-6 text-center">
+			<%= image_tag "amazing_spiderman2.png" %>
+		</div>
+		<div class="col-lg-6 text-center">
+			<h3>Amazing Spider-Man 2</h3>
+			<p class="small">Peter Parker runs the gauntlet as the mysterious company Oscorp sends up a slew of super villains against him, impacting his life.</p>
+
+			<button class="btn btn btn-default"><%= link_to "End Quiz", destroy_user_session_path, method: :delete %></button>
+
+			<h3>Catch the reviews</h3><br>
+                <a href="http://www.imdb.com/title/tt1872181/?ref_=nv_sr_1" ><%= image_tag 'imdb.png' %></a><br><br>
+                <a href="http://www.rottentomatoes.com/m/the_amazing_spider_man_2/" ><%= image_tag 'rt.png' %></a><br><br>
+                <a href="http://www.ign.com/articles/2014/04/09/amazing-spider-man-2-review" ><%= image_tag 'ign.png' %></a>
+			<br>
+            <h3>Watch the trailer</h3><br>
+                <a href="https://www.youtube.com/watch?v=nbp3Ra3Yp74" ><%= image_tag 'youtube.png' %></a>
+		</div>
+			<!-- For LOGOUT purposes -->
+			
+		</div>
+	</div>
+</div>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>URDb</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+
+	<body id="page-top" class="index">
+
+    <!--Navigation-->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#page-top">URDb</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="hidden">'
+              <a href="#">Home</a>
+            </li>
+            <li class="page-scroll">
+              <a href="#handpicked">Hand-Picked</a>
+            </li>
+            <li class="page-scroll">
+              <a href="/users/new">login</a>
+            </li>
+            <li class="page-scroll">
+              <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </nav>
+
+    <header>
+        <div class="container">
+            <div class="row">
+                <ul class="list-inline">
+                    <li class="page-scroll">
+                        <a href="#handpicked"><%= image_tag "submarine.png" %></a>
+                    </li>
+                </ul>
+                  <div class="col-lg-12">
+                    <div class="intro-text">
+                        <span class="name">Underwater Reeltime Database</span>
+                        <hr class="star-light">
+                        <span class="skills">Can't choose a movie? <br>Register and take our quiz!</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="/users/sign_in">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                  <br><br><br>
+                    <h2>Take a dive of faith</h2>
+                    <hr class="star-primary">
+                </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-12 text-center">         
+                <%= yield %> 
+              </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="success" id="handpicked">
+      <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <br>
+                <h2>Hand-Picked</h2>
+                <hr class="star-light">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 text-center">
+                <h3>Catch the reviews</h3><br>
+                    <a href="http://www.imdb.com/title/tt0831387/?ref_=hm_cht_t1" ><%= image_tag 'imdb.png' %></a><br><br>
+                    <a href="http://www.rottentomatoes.com/m/godzilla_2014/" ><%= image_tag 'rt.png' %></a><br><br>
+                    <a href="http://www.ign.com/articles/2014/05/11/godzilla-review" ><%= image_tag 'ign.png' %></a>
+            </div>
+            <div class="col-lg-4 text-center">         
+              <%= image_tag 'godzilla.jpg' %>
+            </div>
+            <div class="col-lg-4 text-center">
+                <h3>Watch the trailer</h3><br>
+                <a href="https://www.youtube.com/watch?v=vIu85WQTPRc" ><%= image_tag 'youtube.png' %></a>
+            </div>   
+        </div>
+      </div>
+    </section>
+
+    <footer class="text-center">
+        <div class="footer-above">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col col-md-4">
+                        <h3>About <br>Underwater Reeltime Database</h3>
+                        <p>This project is developed for <br> MIS 21 - Introduction to Applications Development by Junior Management Information Systems Students.</p>
+                    </div>
+                    <div class="footer-col col-md-4">
+                        <h3>OFFICIAL PARTNERS</h3>
+                        <ul class="list-inline">
+                            <li>
+                                <a href="http://youtube.com" ><%= image_tag 'youtube.png' %></a>
+                            </li>
+                            <li>
+                                <a href="http://imdb.com"><%= image_tag 'imdb.png' %></a>
+                            </li>
+                            <br><br>
+                            <li>
+                                <a href="http://ign.com"><%= image_tag 'ign.png' %></a>
+                            </li>
+                            <li>
+                                <a href="http://rottentomatoes.com"><%= image_tag 'rt.png' %></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-col col-md-4">
+                        <h3>The Developers</h3>
+                        <p>Wilbert Xeryus S. Uy, Jr.
+                            <ul class="list-inline">
+                            <li>
+                                <a href="http://facebook.com/skatz01"><%= image_tag 'fb-icon.png' %></a>
+                            </li>
+                            <li>
+                                <a href="http://twitter.com/xeryusblack"><%= image_tag 'twitter-icon.png' %></a>
+                            </li>
+                        </ul>
+                        <br> 
+                        <p>Louise Chanell S. Sison</p>
+                        <ul class="list-inline">
+                            <li>
+                                <a href="http://facebook.com/chanell.sison" ><%= image_tag 'fb-icon.png' %></a>
+                            </li>
+                            <li>
+                                <a href="http://twitter.com/nell_o1"><%= image_tag 'twitter-icon.png' %></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-below">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        Copyright &copy; 2014 - URDb
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+        <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script src="../../dist/js/bootstrap.min.js"></script>
+        <script src="../../assets/js/docs.min.js"></script>
+
+        <script src="js/jquery-1.10.2.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+        <script src="js/classie.js"></script>
+        <script src="js/cbpAnimatedHeader.js"></script>
+        <script src="js/freelancer.js"></script>
+	</body>
+</html>
+
+

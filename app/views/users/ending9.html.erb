@@ -1,0 +1,27 @@
+<div class="container">
+	<div class="row">
+		<div class="col-lg-12 text-center">
+			<h2>Here is a movie just for you!</h2>
+		</div>
+		<div class="col-lg-6 text-center">
+			<%= image_tag "blended.jpg" %>
+		</div>
+		<div class="col-lg-6 text-center">
+			<h3>Blended</h3>
+			<p class="small">After a bad blind date, a man and woman find themselves stuck together at a resort for families, where their attraction grows as their respective kids benefit from the burgeoning relationship.</p>
+
+			<button class="btn btn btn-default"><%= link_to "End Quiz", destroy_user_session_path, method: :delete %></button>
+
+			<h3>Catch the reviews</h3><br>
+                <a href="http://www.imdb.com/title/tt1086772/?ref_=nv_sr_1" ><%= image_tag 'imdb.png' %></a><br><br>
+                <a href="http://www.rottentomatoes.com/m/blended/" ><%= image_tag 'rt.png' %></a><br><br>
+                <a href="http://www.ign.com/articles/2014/05/23/blended-review" ><%= image_tag 'ign.png' %></a>
+			<br>
+            <h3>Watch the trailer</h3><br>
+                <a href="https://www.youtube.com/watch?v=8MuWt2X59fo" ><%= image_tag 'youtube.png' %></a>
+		</div>
+			<!-- For LOGOUT purposes -->
+			
+		</div>
+	</div>
+</div>

@@ -1,0 +1,27 @@
+<div class="container">
+	<div class="row">
+		<div class="col-lg-12 text-center">
+			<h2>Here is a movie just for you!</h2>
+		</div>
+		<div class="col-lg-6 text-center">
+			<%= image_tag "xmen.jpg" %>
+		</div>
+		<div class="col-lg-6 text-center">
+			<h3>Xmen: Days of Future Past</h3>
+			<p class="small">The X-Men send Wolverine to the past in a desperate effort to change history and prevent an event that results in doom for both humans and mutants.</p>
+
+			<button class="btn btn btn-default"><%= link_to "End Quiz", destroy_user_session_path, method: :delete %></button>
+
+			<h3>Catch the reviews</h3><br>
+                <a href="http://www.imdb.com/title/tt1877832/?ref_=nv_sr_1" ><%= image_tag 'imdb.png' %></a><br><br>
+                <a href="http://www.rottentomatoes.com/m/x_men_days_of_future_past/" ><%= image_tag 'rt.png' %></a><br><br>
+                <a href="http://www.ign.com/videos/2014/05/13/x-men-days-of-future-past-video-review" ><%= image_tag 'ign.png' %></a>
+			<br>
+            <h3>Watch the trailer</h3><br>
+                <a href="https://www.youtube.com/watch?v=gsjtg7m1MMM" ><%= image_tag 'youtube.png' %></a>
+		</div>
+			<!-- For LOGOUT purposes -->
+			
+		</div>
+	</div>
+</div>
